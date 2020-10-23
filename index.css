@@ -100,24 +100,34 @@ body {
   top: 0;
 }
 
+#history #history-btn {
+  margin: 1rem;
+}
+
 #output {
   position: relative;
   text-align: center;
-  width: 10rem;
-  height: 5rem;
   border-radius: 1rem;
+  padding: 1rem;
   background: linear-gradient(145deg, #5a555a, #4c474c);
   -webkit-box-shadow: 12px 12px 24px #444044,  -7px -7px 14px #645e64;
           box-shadow: 12px 12px 24px #444044,  -7px -7px 14px #645e64;
 }
 
 #output p {
-  font-size: 1.1rem;
   font-family: sans-serif;
   letter-spacing: .1rem;
   font-weight: bold;
   text-align: center;
-  line-height: 75px;
+  margin: .5rem;
+}
+
+#output #p1 {
+  font-size: .8rem;
+}
+
+#output #p2 {
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1300px) {
