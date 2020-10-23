@@ -52,6 +52,19 @@ body{
     background: linear-gradient(145deg, #5a555a, #4c474c);
     box-shadow:  7px 7px 14px #474347, 
                  -6px -6px 12px #615b61;
+
+                 
+}
+
+.dice:hover {
+    opacity: 0.5;
+    box-shadow: -3px -3px 5px #686268,
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.dice:active {
+    opacity: 1;
+    box-shadow: inset 12px 12px 24px #444044, 
+    inset -12px -12px 24px #645964;
 }
 
 .pair{
