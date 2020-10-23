@@ -1,0 +1,196 @@
+html, body {
+    font-family: 'Cardo', serif;
+    min-height: 100vh;
+    color:white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#969696;
+    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-top:-2rem;
+    text-shadow: .5rem .5rem #474347;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: #544f54;
+    align-items: center;
+    justify-content: center;
+}
+
+#dice-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top:-2rem;
+    .badge{
+        line-height: 35px;
+        display:table-cell;
+        border-radius: .5rem;
+        width:2rem;
+        height:2rem;
+        margin-left:auto;
+        margin-right:auto;
+        color:rgb(218, 218, 218);
+        text-align: center;
+        font-family: sans-serif;
+        box-shadow: inset 12px 12px 24px #444044, 
+                    inset -12px -12px 24px #645e64;
+    }
+}
+
+.dice{
+
+    margin:1rem;
+    padding:1rem;
+    width:5rem;
+    height:5rem;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #5a555a, #4c474c);
+    box-shadow:  7px 7px 14px #474347, 
+                 -6px -6px 12px #615b61;
+}
+
+.pair{
+    display:flex;
+    flex-direction: column;
+}
+
+#history{
+    position:fixed;
+    padding:1rem;
+    margin:1rem;
+    right:0;
+    top:0;
+}
+
+#output{
+    position: relative;
+    text-align: center;
+    width:10rem;
+    height:5rem;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #5a555a, #4c474c);
+    box-shadow:  12px 12px 24px #444044, 
+             -7px -7px 14px #645e64;
+    p{
+        font-size: 1.1rem;
+        font-family: sans-serif;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 75px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #dice-container{
+        position: absolute;
+        top:20rem;
+        flex-direction: column;
+        .dice{
+            width:10rem;
+            height:10rem;
+        }
+    }
+    h1{
+        margin:5rem;
+        position: absolute;
+        top:0;
+    }
+    .pair{
+        flex-direction: row;
+    }
+  }
+
+  .fadeIn{
+    animation: fadeIn ease .5s;
+    -webkit-animation: fadeIn ease .5s;
+    -moz-animation: fadeIn ease .5s;
+    -o-animation: fadeIn ease .5s;
+    -ms-animation: fadeIn ease .5s;
+  }
+  .levitate{
+    animation: levitate ease 2s;
+    -webkit-animation: levitate ease 2s;
+    -moz-animation: levitate ease 2s;
+    -o-animation: levitate ease 2s;
+    -ms-animation: levitate ease 2s;
+  }
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@keyframes levitate {
+    0% {opacity:0;}
+    100% {    
+        background: linear-gradient(145deg, #5a555a, #4c474c);
+        box-shadow:  7px 7px 14px #474347, 
+                     -6px -6px 12px #615b61;
+        }
+    }
+    
+    @-moz-keyframes levitate {
+    0% {opacity:0;}
+    100% {    
+        background: linear-gradient(145deg, #5a555a, #4c474c);
+        box-shadow:  7px 7px 14px #474347, 
+                     -6px -6px 12px #615b61;
+        }
+    }
+    
+    @-webkit-keyframes levitate {
+    0% {opacity:0;}
+    100% {    
+        background: linear-gradient(145deg, #5a555a, #4c474c);
+        box-shadow:  7px 7px 14px #474347, 
+                     -6px -6px 12px #615b61;
+        }
+    }
+    
+    @-o-keyframes levitate {
+    0% {opacity:0;}
+    100% {    
+        background: linear-gradient(145deg, #5a555a, #4c474c);
+        box-shadow:  7px 7px 14px #474347, 
+                     -6px -6px 12px #615b61;
+        }
+    }
+    
+    @-ms-keyframes levitate {
+    0% {    
+        background: #544f54;
+        box-shadow:  0px 0px 0px #544f54, 
+                        -0px -0px 0px #544f54;
+        }
+    100% {    
+        background: linear-gradient(145deg, #5a555a, #4c474c);
+        box-shadow:  7px 7px 14px #474347, 
+                     -6px -6px 12px #615b61;
+        }
+    }
