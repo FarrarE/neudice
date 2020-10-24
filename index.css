@@ -28,6 +28,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 #dice-container {
@@ -130,6 +131,28 @@ body {
   font-size: 1.2rem;
 }
 
+#alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -220%);
+          transform: translate(-50%, -220%);
+  width: 10rem;
+  height: 10rem;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #444044;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: 150px;
+  opacity: 0;
+}
+
+#alert.show {
+  -webkit-animation: autoFade 2s;
+          animation: autoFade 2s;
+}
+
 @media only screen and (max-width: 1300px) {
   #dice-container {
     position: absolute;
@@ -209,6 +232,24 @@ body {
     background: linear-gradient(145deg, #5a555a, #4c474c);
     -webkit-box-shadow: 7px 7px 14px #474347,  -6px -6px 12px #615b61;
             box-shadow: 7px 7px 14px #474347,  -6px -6px 12px #615b61;
+  }
+}
+
+@-webkit-keyframes autoFade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes autoFade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=index.css.map */
