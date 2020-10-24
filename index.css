@@ -94,6 +94,16 @@ body {
 }
 
 #history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   padding: 1rem;
   margin: 1rem;
@@ -102,12 +112,17 @@ body {
 }
 
 #history #history-btn {
-  margin: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #output {
   position: relative;
   text-align: center;
+  min-width: 12rem;
+  min-height: 5rem;
   border-radius: 1rem;
   padding: 1rem;
   background: linear-gradient(145deg, #5a555a, #4c474c);
@@ -117,7 +132,6 @@ body {
 
 #output p {
   font-family: sans-serif;
-  letter-spacing: .1rem;
   font-weight: bold;
   text-align: center;
   margin: .5rem;
@@ -153,10 +167,21 @@ body {
           animation: autoFade 2s;
 }
 
+button {
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+  z-index: 2;
+}
+
 @media only screen and (max-width: 1300px) {
   #dice-container {
     position: absolute;
-    top: 20rem;
+    bottom: 0;
+    right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -167,9 +192,39 @@ body {
     height: 10rem;
   }
   h1 {
-    margin: 5rem;
     position: absolute;
+    margin-top: 5rem;
     top: 0;
+  }
+  #alert {
+    width: 90%;
+    height: 15rem;
+    font-size: 15rem;
+    top: 40%;
+    line-height: 250px;
+  }
+  #history {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin-right: 10rem;
+    margin-top: 150%;
+  }
+  #history img {
+    width: 10rem;
+    height: 10rem;
+  }
+  #history #output {
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #history #output #p1 {
+    font-size: 3rem;
+  }
+  #history #output #p2 {
+    font-size: 4rem;
   }
   .pair {
     -webkit-box-orient: horizontal;
@@ -180,6 +235,8 @@ body {
 }
 
 .fadeIn {
+  position: relative;
+  margin: 0;
   animation: fadeIn ease .5s;
   -webkit-animation: fadeIn ease .5s;
   -moz-animation: fadeIn ease .5s;
